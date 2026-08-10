@@ -1,3 +1,7 @@
+![License](https://img.shields.io/badge/License-MIT-green.svg)
+![Python](https://img.shields.io/badge/Python-3.12-blue.svg)
+![Vue](https://img.shields.io/badge/Vue-3.x-brightgreen.svg)
+![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)
 # IT 资产管理系统
 
 一套面向中小型组织的 **IT 资产全生命周期管理平台**：统一管理网络设备、服务器、终端等资产，支持双树（组织架构 / 资产分类）归类、SNMP 监控、合同附件、导入导出与审计日志。**纯 Python + Vue 前后端分离项目，不含任何可执行文件（EXE）打包代码。**
