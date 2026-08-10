@@ -50,6 +50,8 @@ _topo.json
 backend/test_contract.pdf
 backend/uploads/
 dashboard-final.png
+# 原始截图源目录（含空状态图），已精选 10 张放入 docs/screenshots/ 并提交
+系统截图/
 
 # ===== 旧 SQL Server 时代残留（不提交） =====
 backend/data/db_config.yaml

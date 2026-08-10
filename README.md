@@ -21,6 +21,38 @@
 
 ---
 
+## 📸 系统界面预览
+
+> 以下截图均取自脱敏后的演示环境（深色主题）。
+
+### 登录与总览
+<p align="center">
+  <img src="docs/screenshots/login.jpg" width="420" alt="登录页"/>
+  <img src="docs/screenshots/dashboard.jpg" width="420" alt="仪表盘"/>
+</p>
+
+### 资产管理
+<p align="center">
+  <img src="docs/screenshots/asset-panel.jpg" width="420" alt="资产面板"/>
+  <img src="docs/screenshots/org-tree.jpg" width="420" alt="组织架构筛选"/>
+</p>
+
+### 可视化亮点
+<p align="center">
+  <img src="docs/screenshots/rack-view.jpg" width="420" alt="机柜视图"/>
+  <img src="docs/screenshots/topology.jpg" width="420" alt="网络拓扑"/>
+</p>
+
+### 字典与配置
+<p align="center">
+  <img src="docs/screenshots/dictionary.jpg" width="400" alt="品牌字典"/>
+  <img src="docs/screenshots/product-types.jpg" width="400" alt="产品类型"/>
+  <img src="docs/screenshots/custom-fields.jpg" width="400" alt="自定义字段"/>
+  <img src="docs/screenshots/settings.jpg" width="400" alt="系统配置"/>
+</p>
+
+---
+
 ## 🧱 技术栈
 
 | 层 | 技术 |
