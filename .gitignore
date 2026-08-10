@@ -1,0 +1,66 @@
+# ============================================================
+# IT 资产管理系统 — .gitignore
+# 纯 Python(FastAPI) + Vue 前后端分离，不含任何打包(EXE)代码。
+#
+# 演示数据库 backend/data/it_asset.db 已脱敏（内网 IP 替换为 10.x 示例段，
+# 凭据列已清空），随仓库一起提交，作为开箱即用的演示种子数据。
+# 请勿将真实运行库或密钥提交到版本库。
+# ============================================================
+
+# ===== 依赖 / 构建产物（不提交） =====
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.venv/
+venv/
+env/
+ENV/
+node_modules/
+frontend/dist/
+backend/app/static_frontend/
+dist/
+build/
+
+# ===== 环境变量 / 日志 / 临时文件（不提交） =====
+.env
+.env.*
+*.log
+*.tmp
+*.bak
+*.bak-*
+
+# ===== 工具 / IDE（不提交） =====
+.workbuddy/
+.idea/
+.vscode/
+*.swp
+.DS_Store
+
+# ===== 密钥文件（严禁提交） =====
+*.key
+backend/config/secret.key
+
+# ===== 运行时生成物（不提交） =====
+_topo.json
+
+# ===== 测试 / 截图产物（非源码，不提交） =====
+backend/test_contract.pdf
+backend/uploads/
+dashboard-final.png
+
+# ===== 旧 SQL Server 时代残留（不提交） =====
+backend/data/db_config.yaml
+backend/data/secrets/
+
+# ===== 空壳库 / 非演示库（不提交；真实演示库见下方白名单） =====
+backend/*.db
+backend/*.sqlite
+backend/*.sqlite3
+backend/data/*.db
+backend/data/*.sqlite
+backend/data/*.sqlite3
+# 白名单：已脱敏的演示种子库
+!backend/data/it_asset.db

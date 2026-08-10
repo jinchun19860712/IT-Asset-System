@@ -1,0 +1,12 @@
+{
+  "server": "ldap://192.168.1.100",
+  "port": 389,
+  "use_ssl": false,
+  "base_dn": "dc=company,dc=com",
+  "admin_dn": "cn=admin,dc=company,dc=com",
+  "admin_password": "",
+  "user_filter": "(objectClass=person)",
+  "ou_filter": "(objectClass=organizationalUnit)",
+  "sync_enabled": false,
+  "sync_interval": "0 2 * * *"
+}

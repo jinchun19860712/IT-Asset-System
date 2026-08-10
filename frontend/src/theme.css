@@ -1,0 +1,151 @@
+/* 主题相关的全局补充样式：确保自定义面板随主题变量正确显示 */
+
+body {
+  background-color: var(--app-bg);
+  color: var(--app-text);
+}
+
+.main-content {
+  background-color: var(--app-bg);
+}
+
+/* 通用卡片/面板 */
+.scope-bar,
+.panel-header,
+.side-header {
+  border-color: var(--app-border);
+}
+
+.scope-bar {
+  background-color: var(--app-panel);
+  color: var(--app-text);
+}
+
+/* 机柜视图 */
+.rack-card {
+  background-color: var(--app-panel);
+  border-color: var(--app-border);
+  color: var(--app-text);
+}
+.rack-card.active {
+  border-color: var(--app-accent);
+}
+.device-tray {
+  background-color: var(--app-panel);
+  border-color: var(--app-border);
+}
+.tray-item {
+  background-color: var(--app-bg);
+  color: var(--app-text);
+}
+.tray-header,
+.side-scope {
+  border-color: var(--app-border);
+}
+.u-row {
+  background-color: var(--app-bg);
+  border-color: var(--app-border);
+}
+.u-slot.free {
+  background-color: var(--app-panel);
+  color: var(--app-text-secondary);
+}
+.u-label {
+  color: var(--app-text-secondary);
+}
+.stat-bar,
+.stat-path,
+.tb-sub,
+.rc-meta {
+  color: var(--app-text-secondary);
+}
+.tray-tip {
+  color: var(--app-text-secondary);
+}
+
+/* 文件夹树面板 */
+.folder-panel,
+.scope-tip {
+  color: var(--app-text);
+}
+.scope-tip {
+  background-color: var(--app-bg);
+  color: var(--app-text-secondary);
+}
+.el-tree {
+  background-color: transparent;
+  color: var(--app-text);
+}
+.el-tree-node__content:hover {
+  background-color: var(--el-fill-color-light);
+}
+
+/* 深色模式下的额外兜底 */
+[data-theme="dark"] body {
+  background-color: var(--app-bg);
+  color: var(--app-text);
+}
+
+[data-theme="dark"] .main-content {
+  background-color: var(--app-bg);
+}
+
+[data-theme="dark"] .rack-card {
+  background-color: var(--app-panel);
+  border-color: var(--app-border);
+}
+
+[data-theme="dark"] .rack-card.active {
+  background-color: var(--el-fill-color-light);
+}
+
+[data-theme="dark"] .device-tray {
+  background-color: var(--app-panel);
+  border-color: var(--app-border);
+}
+
+[data-theme="dark"] .tray-item {
+  background-color: var(--app-bg);
+}
+
+[data-theme="dark"] .u-row {
+  background-color: #0e1115;
+  border-color: var(--app-border);
+}
+
+[data-theme="dark"] .u-slot.free {
+  background-color: var(--app-panel);
+  color: var(--app-text-secondary);
+}
+
+[data-theme="dark"] .folder-panel,
+[data-theme="dark"] .scope-tip {
+  color: var(--app-text);
+}
+
+[data-theme="dark"] .scope-tip {
+  background-color: var(--app-bg);
+}
+
+[data-theme="dark"] .el-tree {
+  background-color: transparent;
+  color: var(--app-text);
+}
+
+[data-theme="dark"] .el-tree-node__content:hover {
+  background-color: var(--el-fill-color-light);
+}
+
+/* 表单/输入框在深色下由 Element Plus dark 处理，这里仅兜底边框 */
+[data-theme="dark"] .el-input__wrapper,
+[data-theme="dark"] .el-textarea__inner {
+  background-color: var(--app-bg);
+}
+
+/* 设备列表列文字兜底 */
+[data-theme="dark"] .path-text {
+  color: var(--app-text-secondary);
+}
+[data-theme="dark"] .metric-value {
+  color: var(--app-text);
+}

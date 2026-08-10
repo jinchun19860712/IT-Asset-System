@@ -1,0 +1,163 @@
+templates:
+  - name: H3C交换机通用模板
+    vendor: H3C
+    device_types:
+      - 交换机
+      - 网络设备
+      - 路由器
+    metrics:
+      - name: CPU利用率
+        oid: 1.3.6.1.4.1.25506.2.6.1.1.1.1.6.1
+        type: percentage
+        unit: '%'
+      - name: 内存利用率
+        oid: 1.3.6.1.4.1.25506.2.6.1.1.1.1.8.1
+        type: percentage
+        unit: '%'
+      - name: 设备温度
+        oid: 1.3.6.1.4.1.25506.2.6.1.1.1.1.10.1
+        type: number
+        unit: '℃'
+      - name: 风扇状态
+        oid: 1.3.6.1.4.1.25506.8.35.9.1.3.1
+        type: boolean
+      - name: 电源状态
+        oid: 1.3.6.1.4.1.25506.8.35.9.1.2.1
+        type: boolean
+      - name: 运行时间
+        oid: 1.3.6.1.2.1.1.3.0
+        type: counter
+
+  - name: HP打印机通用模板
+    vendor: HP
+    device_types:
+      - 打印机
+      - 复印机
+      - 一体机
+    metrics:
+      - name: 碳粉余量
+        oid: 1.3.6.1.2.1.43.11.1.1.9.1
+        type: percentage
+        unit: '%'
+        # 碳粉等"越低越差"指标设 alert_direction=low；CPU/内存等"越高越差"省略/设为 high
+        alert_direction: low
+        warning_threshold: 20
+        critical_threshold: 5
+      - name: 打印总页数
+        oid: 1.3.6.1.2.1.43.10.2.1.4.1
+        type: counter
+        unit: 页
+      - name: A4总打印纸张数量
+        oid: 1.3.6.1.2.1.43.10.2.1.4.1.1
+        type: counter
+        unit: 页
+        description: A4 规格纸张累计打印量
+      - name: 打印机状态
+        oid: 1.3.6.1.2.1.25.3.5.1.1.1
+        type: boolean
+      - name: 纸盒状态
+        oid: 1.3.6.1.2.1.43.18.1.1.8.1
+        type: boolean
+
+  - name: Cisco交换机通用模板
+    vendor: Cisco
+    device_types:
+      - 交换机
+      - 网络设备
+      - 路由器
+    metrics:
+      - name: CPU利用率
+        oid: 1.3.6.1.4.1.9.9.109.1.1.1.1.7.1
+        type: percentage
+        unit: '%'
+      - name: 内存空闲率
+        oid: 1.3.6.1.4.1.9.9.48.1.1.1.5.1
+        type: percentage
+        unit: '%'
+      - name: 设备温度
+        oid: 1.3.6.1.4.1.9.9.13.1.3.1.3.1
+        type: number
+        unit: '℃'
+      - name: 风扇状态
+        oid: 1.3.6.1.4.1.9.9.13.1.4.1.2.1
+        type: boolean
+      - name: 电源状态
+        oid: 1.3.6.1.4.1.9.9.13.1.5.1.2.1
+        type: boolean
+      - name: 运行时间
+        oid: 1.3.6.1.2.1.1.3.0
+        type: counter
+
+  - name: 锐捷交换机通用模板
+    vendor: Ruijie
+    device_types:
+      - 交换机
+      - 网络设备
+      - 路由器
+    metrics:
+      - name: CPU利用率
+        oid: 1.3.6.1.4.1.4881.1.1.10.2.36.1.1.3.0
+        type: percentage
+        unit: '%'
+      - name: 内存利用率
+        oid: 1.3.6.1.4.1.4881.1.1.10.2.36.1.1.4.0
+        type: percentage
+        unit: '%'
+      - name: 设备温度
+        oid: 1.3.6.1.4.1.4881.1.1.10.2.36.1.1.5.0
+        type: number
+        unit: '℃'
+      - name: 风扇状态
+        oid: 1.3.6.1.4.1.4881.1.1.10.2.36.1.1.6.0
+        type: boolean
+      - name: 电源状态
+        oid: 1.3.6.1.4.1.4881.1.1.10.2.36.1.1.7.0
+        type: boolean
+      - name: 运行时间
+        oid: 1.3.6.1.2.1.1.3.0
+        type: counter
+
+  - name: 服务器通用模板
+    vendor: 通用
+    device_types:
+      - 服务器
+      - 存储
+    metrics:
+      - name: CPU利用率
+        oid: 1.3.6.1.4.1.2021.11.9.0
+        type: percentage
+        unit: '%'
+      - name: 内存利用率
+        oid: 1.3.6.1.4.1.2021.4.6.0
+        type: percentage
+        unit: '%'
+      - name: 磁盘使用率
+        oid: 1.3.6.1.4.1.2021.9.1.9.1
+        type: percentage
+        unit: '%'
+      - name: 运行时间
+        oid: 1.3.6.1.2.1.1.3.0
+        type: counter
+
+  - name: UPS通用模板
+    vendor: 通用
+    device_types:
+      - UPS
+      - 动环设备
+    metrics:
+      - name: 电池剩余容量
+        oid: 1.3.6.1.2.1.33.1.2.4.0
+        type: percentage
+        unit: '%'
+      - name: 输入电压
+        oid: 1.3.6.1.2.1.33.1.3.3.1.3.1
+        type: number
+        unit: V
+      - name: 输出负载率
+        oid: 1.3.6.1.2.1.33.1.4.4.1.5.1
+        type: percentage
+        unit: '%'
+      - name: 电池温度
+        oid: 1.3.6.1.2.1.33.1.2.7.0
+        type: number
+        unit: '℃'

@@ -1,0 +1,8 @@
+{
+  "simulate": true,
+  "default_version": "v2c",
+  "default_port": 161,
+  "default_community": "public",
+  "timeout": 2.0,
+  "retries": 1
+}

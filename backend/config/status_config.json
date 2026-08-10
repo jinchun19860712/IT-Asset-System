@@ -1,0 +1,24 @@
+{
+  "statuses": [
+    {
+      "name": "在用",
+      "color": "#67C23A",
+      "sort_order": 1
+    },
+    {
+      "name": "维修",
+      "color": "#E6A23C",
+      "sort_order": 2
+    },
+    {
+      "name": "淘汰",
+      "color": "#909399",
+      "sort_order": 3
+    },
+    {
+      "name": "闲置",
+      "color": "#409EFF",
+      "sort_order": 4
+    }
+  ]
+}
